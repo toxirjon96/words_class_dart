@@ -7,7 +7,7 @@ class Words {
     if (word.isEmpty) {
       throw EmptyStringException("Satr bo'sh bo'lmasligi kerak!");
     }
-    if (RegExp(r"[a-z]+").hasMatch(word)) {
+    if (!RegExp(r"[a-z]+").hasMatch(word)) {
       throw LowerCaseFormatException(
           "Satr faqat kichik harflardan tashkil topishi kerak!");
     }
