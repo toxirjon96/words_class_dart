@@ -14,6 +14,10 @@ class Words {
     return Words(word: word);
   }
 
+  Words copyWith({String? word}) {
+    return Words(word: word ?? this.word);
+  }
+
   String get word => _word;
 
   @override
@@ -21,6 +25,11 @@ class Words {
 
   @override
   int get hashCode => Object.hashAll([word]);
+
+  @override
+  noSuchMethod(Invocation invocation) {
+    print("Classda bunday method yoki property mavjud emas!");
+  }
 
   @override
   String toString() {
