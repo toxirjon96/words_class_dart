@@ -15,4 +15,15 @@ class Words {
   }
 
   String get word => _word;
+
+  @override
+  bool operator ==(Object other) => other is Words && other.word == word;
+
+  @override
+  int get hashCode => Object.hashAll([word]);
+
+  @override
+  String toString() {
+    return "$runtimeType{word:$word}";
+  }
 }
