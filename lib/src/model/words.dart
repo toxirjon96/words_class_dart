@@ -20,6 +20,27 @@ class Words {
 
   String get word => _word;
 
+  String reverseVowels() {
+    RegExp vowelsValidation = RegExp(r"[aeiou]");
+    String onlyVowels = word
+        .split("")
+        .where((e) => vowelsValidation.hasMatch(e))
+        .toList()
+        .reversed
+        .join("");
+    String result = "";
+    int index = 0;
+    for (int i = 0; i < word.length; i++) {
+      if (vowelsValidation.hasMatch(word[i])) {
+        result += onlyVowels[index];
+        index++;
+      } else {
+        result += word[i];
+      }
+    }
+    return result;
+  }
+
   @override
   bool operator ==(Object other) => other is Words && other.word == word;
 
