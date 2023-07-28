@@ -3,7 +3,10 @@ import 'package:exam_modul/exam_modul_library.dart';
 class Words {
   late String _word;
 
-  factory Words({required String word}) {
+  Words({required String word}) {
+    _word = word;
+  }
+  factory Words.byFactory({required String word}) {
     if (word.isEmpty) {
       throw EmptyStringException("Satr bo'sh bo'lmasligi kerak!");
     }

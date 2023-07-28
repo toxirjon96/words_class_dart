@@ -2,6 +2,7 @@ import 'package:exam_modul/exam_modul_library.dart';
 
 class WordLogic {
   const WordLogic();
+
   void call() {
     String word = stdin.readLineSync() ?? "";
 
