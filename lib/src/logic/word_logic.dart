@@ -7,7 +7,7 @@ class WordLogic {
     String text = stdin.readLineSync() ?? "";
 
     try {
-      Words w1 = Words(word: text);
+      Words w1 = Words.byFactory(word: text);
       Words w2 = w1.copyWith(word: "leetcode");
       print(w1.word);
       print(w1.reverseVowels());
